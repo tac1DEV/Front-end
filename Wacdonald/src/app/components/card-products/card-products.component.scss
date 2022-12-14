@@ -1,0 +1,39 @@
+:host{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0px;
+    background: #f8f8f6;
+    border-radius: 20px;
+
+    &.promo{
+        background: #d32923;
+
+    h4{
+        color: white;
+    }
+    }
+    
+}
+
+img{
+    width: 50px;
+    margin-bottom: 8px;
+}
+
+h4{
+    text-align: center;
+    font-size: 8px;
+    padding-bottom: 10px;
+}
+
+span{
+    display: inline-flex;
+    border-radius: 10px;
+    background: rgba(white, .4);
+    padding: 0 10px;
+    height: 14px;
+    font-size: 15px;
+    color: gold;
+}

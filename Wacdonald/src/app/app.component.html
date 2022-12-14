@@ -1,0 +1,23 @@
+<div class="appli">
+	<div class="main-wrapper">
+		<div class="logo">
+			<img  src="/assets/logo.png">
+		</div>
+		<div class="heading">
+			<h1 class="bold hey">Hey,</h1>
+			<h3 class="regular wup">What's up?</h3>
+		</div>
+		<div class="grid-menu">
+			<app-card-menu *ngFor="let menu of listMenuA" [menu]="menu" [class.promo]="menu.promo"></app-card-menu>
+		</div>
+		<h1 class="bold pop">Popular</h1>
+		<div class="grid-product">
+			<app-card-products *ngFor="let menu of listMenuB" [menu]="menu"></app-card-products>
+		</div>
+	</div>
+	<div class="space"></div>
+	<div class="sidebar">
+		<app-sidebar></app-sidebar>
+	</div>
+</div>
+

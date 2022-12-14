@@ -1,0 +1,27 @@
+<div class="flag">
+	<img src="assets/icons/flag.png">
+</div>
+<div class="liste">
+	<div class="top">
+		<h4>My Order</h4>
+		<span class="regular TO">Take Out</span>
+	</div>
+	<div class="listecommande">
+		<div *ngFor="let menu of listMenuA" class="commande">
+			<img src="/assets/icons/{{menu.icon}}">
+			<h4 class="regular">{{menu.name}}</h4>
+			<span class="regular">{{menu.price}}€</span>
+			<div class="count">
+				<span class="button left">-</span>
+				<span>{{menu.count}}</span>
+				<span class="button right">+</span>
+			</div>
+		</div>
+	</div>
+	<div class="total">
+		<span class="regular TO">Total</span>
+		<h4>12€</h4>
+		<span id="done">Done</span>
+	</div>
+</div>
+
