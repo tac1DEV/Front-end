@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+.title{
+    width: 210px;
+    position: absolute;
+    top:30px;
+    left: 100px;
+}
+
+.title h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.title h4{
+    font-size: 15px;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    height: 100vh;
+}
+
+.left{
+    width: 45vw;
+    background: #fff;
+}
+
+.left-content{
+    width: 30vw;
+    margin: 0 auto;
+    padding-top: 30vh;
+}
+
+.left p, nav ul li
+{
+	font-weight: 700;
+}
+
+.left p{
+    font-size: 72px;
+}
+
+.start{
+    padding-top: 180px;
+}
+
+.start p{
+    font-size: 24px;
+    padding: 15px 30px;
+    border: 3px solid black;
+    width: 150px;
+}
+
+.gris p
+{
+    font-size: 27px;
+	color: #5e5e5e;
+    padding-top: 40px;
+}
+
+.right{
+    width: 55vw;
+    background-image: url("./image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    background: rgba(150,150,150,50);
+    opacity: 80%;
+    font-size: 20px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+    padding-left: 10vw;
+}
+
+.about{
+    margin: 0 3vw;
+}
+
+nav li{
+    margin: 0 2vw;
+    display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+/*code trouvé*/
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: -2px;
+    left: 1px;
+    background-color: black;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+/*code trouvé*/
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 810px) { 
+
+    
+    .title {
+        width: 260px;
+        position: absolute;
+        top: 3vh;
+        left: 7vw;
+        z-index: 10;
+    }
+    
+    .title h1 {
+        font-size: 36px;
+    }
+    
+    .title h4 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .content{
+        display: block;
+    }
+
+    nav{
+        height: 10vh;
+        width: 100%;
+        background: rgba(150,150,150,50);
+        opacity: 80%;
+    }
+
+    .right {
+        width: 100vw;
+        height: 50vh;
+        position: absolute;
+        top: 0;
+        background-image: url("./image.jpg");
+    }
+
+    .hover-underline-animation{
+        display: none;
+    }
+
+    .more {
+        position: absolute;
+        top: 4vh;
+        right: 2vw;
+    }
+    
+    .more svg{
+        width: 40px;
+        height: 30px;
+    }
+
+    .left{
+        width: 100vw;
+    }
+
+    .left-content {
+        width: 70vw;
+        margin: 0 auto;
+        padding-top: 55vh;
+    }
+
+    .left-content p {
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    .gris p{
+        padding-top: 2vh;
+        font-size: 5vw;
+    }
+
+    .start {
+        padding-top: 10vh;
+        width: 33vw;
+        margin: 0 auto;
+    }
+    
+    .start p {
+        font-size: 4vw;
+        padding: 2vh 2vw;
+        border: 3px solid black;
+        width: 30vw;
+    }
+}
