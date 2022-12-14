@@ -1,4 +1,4 @@
-This project is available on <a href="wacdonald.app.web" target="_blank">wacdonald.app.web</a> 
+This project is available on https://wacdonald.app.web 
 # Wacdonald
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
