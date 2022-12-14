@@ -1,4 +1,6 @@
-This project is available on https://wacdonald.web.app 
+This project is available on https://wacdonald.web.app.
+It's designed for mobiles.
+I made this project following this video (https://www.youtube.com/watch?v=9kULTUsPOgw), it's quite easy to understand, and a nice way to learn some angular tricks.
 # Wacdonald
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
