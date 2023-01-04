@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body
+			{
+				background: #333;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				font-family: 'poppoins', sans-serif;
+			}
+
+			.tabs
+			{
+				display: flex;
+				flex-wrap: wrap;
+				width: 380px;
+			}
+
+			.tabs label
+			{
+				order:1;
+				display: block;
+				padding: 10px 15px;
+				margin-right: 0.2rem;
+				cursor: pointer;
+				background: yellow;
+				font-weight: bold;
+				transition: background ease 0.3s;
+			}
+
+			.tabs .tab
+			{
+				order: 99;
+				flex-grow: 1;
+				width: 100%;
+				height: 280px;
+				display: none;
+				padding: 1rem;
+				background: #fff;
+			}
+
+			.tabs input[type="radio"]
+			{
+				display:none;
+			}
+
+			.tabs input[type="radio"]:checked+label
+			{
+				background: #fff;
+			}
+
+			.tabs input[type="radio"]:checked+label+.tab
+			{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tabs">
+			<input type="radio" name="tabs" id="tabone" checked="checked">
+			<label for="tabone">First</label>
+			<div class="tab">
+				<h1>First</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit venenatis sem. Curabitur gravida massa quis tortor consequat laoreet. Ut eleifend mi ac euismod venenatis. Curabitur quis nisi sit amet dui venenatis scelerisque.
+				</p>
+			</div>
+			<input type="radio" name="tabs" id="tabtwo" checked="checked">
+			<label for="tabtwo">Second</label>
+			<div class="tab">
+				<h1>Second</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit venenatis sem. Curabitur gravida massa quis tortor consequat laoreet. Ut eleifend mi ac euismod venenatis. Curabitur quis nisi sit amet dui venenatis scelerisque.
+				</p>
+			</div>
+			<input type="radio" name="tabs" id="tabthree" checked="checked">
+			<label for="tabthree">Third</label>
+			<div class="tab">
+				<h1>Third</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit venenatis sem. Curabitur gravida massa quis tortor consequat laoreet. Ut eleifend mi ac euismod venenatis. Curabitur quis nisi sit amet dui venenatis scelerisque.
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

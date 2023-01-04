@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link href="./navmenueffect.css" rel="stylesheet">
+  </head>
+<body>
+<nav id="nav">
+    <a href="" target="_blank">
+        <span>Salut,</span>
+        <img src="https://previews.123rf.com/images/vadymvdrobot/vadymvdrobot1508/vadymvdrobot150800220/43198602-pleine-longueur-portrait-d-un-salut-geste-jeune-homme-montrant-isol%C3%A9-sur-un-fond-blanc.jpg">
+    </a>
+    <a href="" target="_blank">
+        <span>je m'appelle</span>
+        <img src="https://www.rts.ch/2014/11/12/10/34/6297177.image?w=960&h=384">
+    </a>
+    <a href="" target="_blank">
+        <span>Thomas</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg">
+    </a>
+    <a href="" target="_blank">
+        <span>et ceci</span>
+        <img src="https://media.ouest-france.fr/v1/pictures/85715275ce532cc0421e7fa8c635d236-11864597.jpg?width=1260&client_id=eds&sign=0e03eb3479db8287f94c28e829dab49f6c0884e14f8d40b0495023f53078b9e6">
+    </a>
+    <a href="" target="_blank">
+        <span>est un exemple</span>
+        <img src="https://parlez-vous-francais.fr/wp-content/uploads/2021/05/exemple-example.jpg">
+    </a>
+    <a href="" target="_blank">
+        <span>de navbar</span>
+        <img src="https://onaircode.com/wp-content/uploads/2019/09/a-navigation-bar-dropdown-menu-1080x675.jpg">
+    </a>
+    <a href="" target="_blank">
+        <span>plutot sympathique</span>
+        <img src="https://cdn.pixabay.com/photo/2014/04/03/10/41/hand-311121_960_720.png">
+    </a>
+</nav>
+</body>
+<script>
+const nav = document.getElementById("nav");
+
+    for(const link of nav.getElementsByTagName("a")) {
+        link.onmousemove = e => {
+            const rect = link.getBoundingClientRect(),
+                  img = link.querySelector("img");
+    
+            img.style.left = `${e.clientX - rect.left}px`;
+            img.style.top = `${e.clientY - rect.top}px`;
+        }
+    }
+    
+    window.onmousemove = e => {
+        const percent = e.clientY / window.innerHeight,
+              y = percent * nav.offsetHeight * -1;
+    
+        nav.animate({
+            transform: `translateY(${y}px)`
+        }, {
+            fill: "forwards",
+            duration: 4000
+        })
+    }</script>
+    </html>

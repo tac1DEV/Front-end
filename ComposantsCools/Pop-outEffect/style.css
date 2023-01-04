@@ -1,0 +1,71 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+    text-decoration: none;
+    font:inherit;
+}
+
+body{
+    font-size: 1.25em;
+    line-height: 1.6em;
+    padding: 20rem 0;
+    background-color: rgb(26, 26, 26);
+    color: white;
+}
+
+img{
+max-width: 100%;
+display: block;
+}
+
+.person{
+    --transform-speed: 350ms; /*Custom property > permet de changer simultanément les speeds de differentes propriétés*/
+    position: relative;
+    max-width: 15rem;
+    margin-inline: auto;/*centre le contenu*/
+}
+
+.person__circle{
+    position: absolute;
+    inset: auto 0 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin-inline: auto;
+    object-fit: cover;
+}
+
+.person__img{
+    position: relative;
+    z-index: 2;
+    transform: scale(1.4);
+    
+    transition: transform var(--transform-speed) ease;
+}
+
+.person__container:hover{
+    transform: scale(1.1);
+
+    transition: transform var(--transform-speed) ease;
+}
+
+.person__container{
+    aspect-ratio: 1 / 1.35;/*il faut que le ratio soit assez grand pour pas clipper la tete*/
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;/*donne la forme d'un pilier*/
+    overflow: hidden;
+    
+    transition: transform var(--transform-speed) ease;
+}
+
+.person__container:hover .person__img{
+    transform: 
+        translateY(-1.5rem) 
+        scale(1.4);
+}
