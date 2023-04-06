@@ -26,13 +26,14 @@ body{
     font-family: "MontserratBold";
 }
 
-.logo{
-    position: absolute;
-    top: 30px;
-    left: 30px;
+.logo {
+	position: relative;
+	top: 0;
+	margin-bottom: 100px;
 }
 .logo img {
     width: 50px;
+    margin-top: 20px;
     }
 
 li img{
@@ -41,6 +42,15 @@ li img{
 
 .appli, .sidebar{
     display: flex;
+}
+
+.appli {
+    width: fit-content;
+    margin: 0 auto;
+    height: 667px;
+    overflow-y: scroll;
+    border: 10px solid black;
+    border-radius: 25px;
 }
 
 .hey{
@@ -57,7 +67,7 @@ li img{
 }
 
 .main-wrapper{
-    padding: 145px 15px 0 15px;
+    padding: 0 15px;
 }
 
 .heading{
@@ -79,10 +89,3 @@ li img{
     grid-gap: 10px;
     grid-template-columns:/*repeat(3, 1fr);*/ repeat(3, minmax(0, 1fr)); /*-- Donne exactement la meme largeur pour les 3 cases -- */
 }
-
-.space{
-    display: flex;
-    position: relative;
-    width: 160px;
-}
-
