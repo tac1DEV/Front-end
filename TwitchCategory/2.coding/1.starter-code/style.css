@@ -1,0 +1,70 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+    padding-block-start: 120px;
+    padding-inline: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.twitch-list{
+    max-inline-size: 1700px; /*definit la taille verticale ou horizontale max d'un element block*/
+    margin-inline: auto; /*définit la marge sur les côtés de l'élément qui sont ceux de l'axe en ligne*/
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /*mini: largeur d'une carte, max largeur max device*/
+    gap:14px;
+}
+
+/*Effet hover card twitch*/
+.twitch-card__top-content{
+    background-color:#9147ff;
+}
+.twitch-card__img{
+    display: flex; /*pour fix un bug avec le css du background en display:block ou display:inline*/
+    width: 100%;
+    transition: transform 75ms ease;
+}
+.twitch-card__top-content:hover .twitch-card__img{
+    transform: translate(6px,-6px)
+}
+/*Effet hover card twitch*/
+
+.twitch-card__bottom-content{
+    padding-block: 5px; /*propriété spécifique au texte + ne prend pas en compte le padding sur les cotés*/
+}
+.twitch-card__title{
+    font-weight: 700;
+    font-size:14px;
+    color: rgb(31,31,35)
+}
+.twitch-card__title:hover{
+    color: #9147ff;
+}
+.twitch-card__viewers-count{
+    margin-block-end:5px; /*propriété spécifique au texte + par defaut ca fait une margin-bottom*/
+    color: #53535f;
+}
+.twitch-card__tag{
+    display:inline-block;
+    padding-block:4px;
+    padding-inline:10px;
+    font-size:12px;
+    background-color:#adadb838;
+    color:#141417;
+    border-radius:99px;
+}
+
+@media (max-width: 420px){ /*Pour garder minimum deux cards*/
+    .twitch-list{
+        grid-template-columns: 1fr 1fr;
+    }
+}

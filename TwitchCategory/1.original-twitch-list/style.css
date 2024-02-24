@@ -1,0 +1,83 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+    padding-block-start: 120px;
+    padding-inline: 14px;
+}
+a {
+    text-decoration: none;
+}
+
+.twitch-list {
+    max-inline-size: 1700px;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap; /* wrap */
+    list-style: none;
+    gap: 14px;
+}
+.twitch-card, 
+.placeholder {
+    background-color: #f1f1f1;
+    flex: 1 0 auto; /* flex-grow */
+    -webkit-box-flex: 1;
+    width: 180px; /* base width */
+    max-width: 50%; /* max */
+}
+.placeholder {
+    background-color: transparent;
+}
+
+
+/* Styles */
+
+.twitch-card {
+    background-color: #f1f1f1;
+}
+.twitch-card__top-content {
+    background-color: #9147FF;
+}
+.twitch-card__img {
+    display: flex; /* for img gap */
+    width: 100%;
+    transition: transform 75ms ease;
+}
+.twitch-card__bottom-content {
+    padding-block: 5px;
+}
+.twitch-card__top-content:hover .twitch-card__img{
+    transform: translate(6px, -6px);
+}
+.twitch-card__title {
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(31,31,35);
+}
+.twitch-card__title:hover {
+    color: #9147FF;
+}
+.twitch-list__card__viewers-count {
+    margin-block-end: 5px;
+    color: #53535f;
+    font-size: 14px;
+}
+.twitch-card__tag {
+    display: inline-block;
+    padding-block: 4px;
+    padding-inline: 10px;
+    font-size: 12px;
+    background: rgba(173,173,184,0.22);
+    color: rgb(20, 20, 23);
+    border-radius: 99px;
+}
+@media (max-width: 400px) {
+    .twitch-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
